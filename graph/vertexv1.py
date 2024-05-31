@@ -1,5 +1,5 @@
 class Vertex:
-    def __init__(self,key):
+    def __init__(self, key):
         self.id = key
         self.connected_to = {}
 
