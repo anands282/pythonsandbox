@@ -12,3 +12,4 @@ portfolio = [{'name': 'IBM', 'shares': 100, 'price': 91.1},
              {'name': 'HPQ', 'shares': 35, 'price': 31.75}
 ]
 print(heapq.nlargest(3, portfolio, key=lambda p: p['price']))
+
