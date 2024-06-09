@@ -16,3 +16,13 @@ class Queue(object):
         self.__num_items += 1
         return True
 
+    def remove(self):
+        if self.isEmpty():
+            raise Exception("Queue underflow")
+        front = self.__que[self.__front]
+        self.__que[self.__front] = None
+        self.__front += 1
+        if self.__front == self.__maxSize:
+            self.front = 0
+        self.__num_items -= 1
+        return front
