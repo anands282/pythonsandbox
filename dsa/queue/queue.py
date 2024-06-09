@@ -31,3 +31,19 @@ class Queue(object):
         return None if self.isEmpty() else self.__que[self.__front]
 
     def isEmpty(self): return self.__num_items == 0
+
+    def isFull(self): return self.__num_items == self.__maxSize
+
+    def __len__(self): return self.__num_items
+
+    def __str__(self):
+        ans = "["
+        for i in range(self.__num_items):
+            if len(ans) > 1:
+                ans += ", "
+            j = i + self.__front
+            if j >= self.__maxSize:
+                j -= self.__maxSize
+            ans += str(self.__que[j])
+        ans += "]"
+        return ans
