@@ -26,3 +26,8 @@ class Queue(object):
             self.front = 0
         self.__num_items -= 1
         return front
+
+    def peek(self):
+        return None if self.isEmpty() else self.__que[self.__front]
+
+    def isEmpty(self): return self.__num_items == 0
