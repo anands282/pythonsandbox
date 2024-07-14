@@ -5,4 +5,4 @@ def fibonacci(n):
 
 # Example usage:
 print(fibonacci(10))  # Output: 55
-#time complexity is O(n^2)
+#time complexity is O(2^n)
